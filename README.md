@@ -3,13 +3,13 @@
 - MIT 8103 Advanced Database System portfolio: Cryptocurrency wallet and transaction platform using MySQL
 - crpytocurrency-transaction-insight-V3-sql-mysql.sql: this is the main database, it creates the database and loads the data
 - 01-verify-row-counts.sql: this is a short verification script, checks all five tables loaded correctly
-- The Screenshot 01_row_counts.png, showing the result grid
+- The Screenshot [Akira verify row](portfolio-1-database-design/screenshots/01-verify-row-counts.png), showing the result grid
 ### Case Study: Akira Cryptocurrency Platform
 - Akira is a simulated cryptocurrency platform that allows customers to maintain digital wallets, monitor their wallet balances and track cryptocurrency transaction activity. The system uses a MySQL database to manage customer accounts and organize information about their wallets and associated transactions.
 - The database is used by customers, system administrators and data analysts. It stores customer details, registration dates, device types and last access times, wallet balances and creation dates, wallet addresses, transaction amounts and timestamps.
 - Key operations include registering customers, creating and managing wallet records, tracking device access, storing wallet addresses, retrieving transaction histories linked to individual wallets, checking recorded balances and generating reports to analyse transaction activity.
 - app.diagrams.net was used to design the ER Diagram. portfolio-1-database-design\ER-DIAGRAM.png
-- [Akira ER Diagram](portfolio-1-database-design/ER-DIAGRAM.png)
+- [Akira ER Diagram](portfolio-1-database-design/screenshots/ER-DIAGRAM.png)
 - Schema exploration with 'DESCRIBE' on all 5 tables (users, wallets, devices, addresses, transactions)
 - Foreign-key query (4 FKs identified)
 ### Problem solved
