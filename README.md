@@ -5,11 +5,27 @@
 - 01-verify-row-counts.sql: this is a short verification script, checks all five tables loaded correctly
 - The Screenshot [Akira verify row](portfolio-1-database-design/screenshots/01_row_counts.png), showing the result grid
 ### Case Study: Akira Cryptocurrency Platform
-- Akira is a simulated cryptocurrency platform that allows customers to maintain digital wallets, monitor their wallet balances and track cryptocurrency transaction activity. The system uses a MySQL database to organize customer accounts and organize information about their wallets and associated transactions.
-- The database is used by customers, system administrators and data analysts. It stores customer details, registration dates, device types and last access times, wallet balances and creation dates, wallet addresses, transaction amounts and timestamps.
-- Key operations include registering customers, creating and managing wallet records, tracking device access, storing wallet addresses, retrieving transaction histories linked to individual wallets, checking recorded balances and generating reports, and transferring funds between wallets while updating the relevant balances.
+ORGANISATION: Akira is a simulated cryptocurrency platform.
+WHAT THE SYSTEM DOES: Akira lets customers maintain digital wallets, monitor their wallet balances and track cryptocurrency transaction activity. Everything is stored in a MySQL database that links customer accounts and organize their wallets and associated transactions.
+
+WHO USES THE DATABASE:
+- Customers sign up, create wallets, check balances and history and send funds.
+- System administrators look after wallet records keep an eye on devices access and run the platform day to day.
+- Data analysts pulls reports on transaction volumes, wallet acttivity and how users behave.
+MAIN DATA STORED:
+- Customer details: name, email, registration dates.
+- Device access: device types and last access times.
+- Wallets: addresses, balances and creation dates,currency.
+- Transactions: amount, timestamps and wallet involved.
+- Ledger entries: a permanent record of every balance change.
+WHAT THE DATABASE NEEDS TO DO:
+- Registering customers and set up thier wallets.
+- Record device access and login activities.
+- Storing wallet addresses and pull up a wallets transaction history.
+- Check balance and produce generating reports.
+- Transferring funds between wallets while updating the relevant balances in a single transaction.
 #### Dataset source
-The dataset used for this project is cryptocurrency Transaction Insights, obtained from the Database Sample website. It contains synthetic data created for learning and practising database concepts. The Data is used to develop and demonstrate the Akira simulated cryptocurrency platform
+I used the synthetic project is cryptocurrency Transaction Insights, obtained from the Database Sample website. The Data is used to develop and demonstrate the Akira simulated cryptocurrency platform and reorganised it into a normalised relationship design.
 ##### Reference
 - DatabaseSample. CRYPTOCURRENCY TRANSACTION INSIGHTS. database sample website. [https://databasesample.com/datasets/cryptocurrency-transaction-insights]. Accessed 13 October 2026.
   
