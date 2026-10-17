@@ -30,7 +30,7 @@ I used the synthetic project is cryptocurrency Transaction Insights, obtained fr
 - DatabaseSample. CRYPTOCURRENCY TRANSACTION INSIGHTS. database sample website. [https://databasesample.com/datasets/cryptocurrency-transaction-insights]. Accessed 13 October 2026.
   
 - app.diagrams.net was used to design the ER Diagram. portfolio-1-database-design\ER-DIAGRAM.png
-- [Akira ER Diagram](portfolio-1-database-design/screenshots/ER-DIAGRAM.png)
+- [Akira ER Diagram](portfolio-1-database-design/er-diagram_akira-er-diagram.png)
 - Schema exploration with 'DESCRIBE' on all 5 tables (users, wallets, devices, addresses, transactions)
 - Foreign-key query (4 FKs identified)
 ### Problem solved
