@@ -57,6 +57,7 @@ I ran `DESCRIBE` on all five tables (users, wallets, devices, addresses, transac
 - One wallet has many addresses and many transactions.
 - `wallets.user_id` and `devices.user_id` reference `users.id`.
 - `addresses.wallet_id` and `transactions.wallet_id` reference `wallets.id`.
+- Screenshots 08 and 10 show the results of the V4 and V6 checks in `SQL/04_validation.sql`. Both returned 0 rows, which is what I expected, because it means the check found nothing wrong.
 
 ### Problems I ran into
 
