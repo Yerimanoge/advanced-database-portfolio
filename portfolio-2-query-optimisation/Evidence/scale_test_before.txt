@@ -1,0 +1,42 @@
+'-> Aggregate: count(0), sum(perf_transactions.amount)  (cost=25890 rows=1)
+    -> Filter: ((perf_transactions.`type` = 'transfer') and (perf_transactions.`status` = 'reversed'))  (cost=20135 rows=24978)
+        -> Table scan on perf_transactions  (cost=20135 rows=199826)
+'
+'-> Aggregate: count(0), sum(perf_transactions.amount)  (cost=25890 rows=1) (actual time=219..219 rows=1 loops=1)
+    -> Filter: ((perf_transactions.`type` = 'transfer') and (perf_transactions.`status` = 'reversed'))  (cost=20135 rows=24978) (actual time=0.762..214 rows=13333 loops=1)
+        -> Table scan on perf_transactions  (cost=20135 rows=199826) (actual time=0.755..126 rows=200000 loops=1)
+'
+'-> Sort: day
+    -> Table scan on <temporary>
+        -> Aggregate using temporary table
+            -> Filter: ((perf_transactions.`timestamp` >= TIMESTAMP'2025-02-01 00:00:00') and (perf_transactions.`timestamp` < TIMESTAMP'2025-02-08 00:00:00'))  (cost=20135 rows=22198)
+                -> Table scan on perf_transactions  (cost=20135 rows=199826)
+'
+'-> Sort: `day`  (actual time=156..156 rows=7 loops=1)
+    -> Table scan on <temporary>  (actual time=156..156 rows=7 loops=1)
+        -> Aggregate using temporary table  (actual time=156..156 rows=7 loops=1)
+            -> Filter: ((perf_transactions.`timestamp` >= TIMESTAMP'2025-02-01 00:00:00') and (perf_transactions.`timestamp` < TIMESTAMP'2025-02-08 00:00:00'))  (cost=20135 rows=22198) (actual time=17.8..149 rows=10080 loops=1)
+                -> Table scan on perf_transactions  (cost=20135 rows=199826) (actual time=2.42..103 rows=200000 loops=1)
+'
+'-> Limit: 20 row(s)  (cost=461 rows=20)
+    -> Sort: perf_transactions.`timestamp` DESC, limit input to 20 row(s) per chunk  (cost=461 rows=1316)
+        -> Index lookup on perf_transactions using fk_transactions_wallet_id (wallet_id = 10)  (cost=461 rows=1316)
+'
+'-> Limit: 20 row(s)  (cost=461 rows=20) (actual time=8.18..8.19 rows=20 loops=1)
+    -> Sort: perf_transactions.`timestamp` DESC, limit input to 20 row(s) per chunk  (cost=461 rows=1316) (actual time=8.18..8.18 rows=20 loops=1)
+        -> Index lookup on perf_transactions using fk_transactions_wallet_id (wallet_id = 10)  (cost=461 rows=1316) (actual time=1.44..7.09 rows=1316 loops=1)
+'
+'-> Table scan on <temporary>
+    -> Aggregate using temporary table
+        -> Nested loop inner join  (cost=2229 rows=795)
+            -> Table scan on m  (cost=1.5 rows=5)
+            -> Filter: ((t.`status` = 'completed') and (t.`type` = 'payment'))  (cost=321 rows=159)
+                -> Index lookup on t using fk_tk_to_wallet (to_wallet_id = m.wallet_id)  (cost=321 rows=1273)
+'
+'-> Table scan on <temporary>  (actual time=500..500 rows=5 loops=1)
+    -> Aggregate using temporary table  (actual time=500..500 rows=5 loops=1)
+        -> Nested loop inner join  (cost=2229 rows=795) (actual time=24.9..399 rows=46667 loops=1)
+            -> Table scan on m  (cost=1.5 rows=5) (actual time=23.9..24 rows=5 loops=1)
+            -> Filter: ((t.`status` = 'completed') and (t.`type` = 'payment'))  (cost=321 rows=159) (actual time=0.735..73.6 rows=9333 loops=5)
+                -> Index lookup on t using fk_tk_to_wallet (to_wallet_id = m.wallet_id)  (cost=321 rows=1273) (actual time=0.728..64.5 rows=13333 loops=5)
+'
