@@ -3,7 +3,7 @@
 > DRAFT written with AI assistance (see AI Use Declaration in the root README). Rewrite the explanations in your own words, and only keep what you can explain. Status of all SQL here: **specified, not yet executed** until you run it and attach your screenshots.
 
 ## 1. Case study
-Akira is a simulated cryptocurrency platform where users hold wallets, send crypto to other users, and pay businesses that accept it. One currency unit is used throughout (no conversion, no multiple coin types). Users: regular users, merchants, data analysts. Data source: *Cryptocurrency Transaction Insights*, DatabaseSample, 2026 (synthetic, for learning), accessed 15 October 2026. Add the dataset page URL you used.
+Akira is a fintech cryptocurrency platform where users hold wallets, send crypto to other users, and pay businesses that accept it. One currency unit is used throughout (no conversion, no multiple coin types). Users: regular users, merchants, data analysts. Data source: *Cryptocurrency Transaction Insights*, DatabaseSample, 2026 (synthetic, for learning), accessed 15 October 2026. Add the dataset page URL you used.
 
 ## 2. Original schema and its limitations
 Original tables: users, wallets, devices, addresses, transactions (4 foreign keys). Limits for Akira:
