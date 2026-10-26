@@ -73,8 +73,4 @@ See sql/01 to 03. Every change maps to a rule above; nothing was added that the 
 - ALTER TABLE statements commit automatically in MySQL, so the scripts are meant to run once, after a backup.
 - Your database was loaded from the file named v3 (the tab name); email is already UNIQUE there. State in the README which dataset version you used.
 
-## 10. Evidence to capture yourself
-Screenshots of 00_pre_checks output, 04_validation V1 to V6, and the four failing statements in V7 (the error messages are the evidence).
 
-## 10. Evidence to capture yourself
-Screenshots of 00_pre_checks output, 04_validation V1 to V6, and the four failing statements in V7 (the error messages are the evidence).
