@@ -18,6 +18,7 @@ UPDATE wallets SET opening_balance = balance;
 ALTER TABLE wallets
   MODIFY balance DECIMAL(14,6) NOT NULL DEFAULT 0,
   ADD CONSTRAINT chk_wallets_opening_balance CHECK (opening_balance >= 0),
+  ADD CONSTRAINT chk_balance CHECK (balance >= 0), 
   ADD UNIQUE KEY uq_wallets_id_user (id, user_id);   
 
 COMMIT;
