@@ -1,9 +1,7 @@
 # Portfolio 1: Database Design and Modelling (Akira)
 
-> DRAFT written with AI assistance (see AI Use Declaration in the root README). Rewrite the explanations in your own words, and only keep what you can explain. Status of all SQL here: **specified, not yet executed** until you run it and attach your screenshots.
-
 ## 1. Case study
-Akira is a fintech cryptocurrency platform where users hold wallets, send crypto to other users, and pay businesses that accept it. One currency unit is used throughout (no conversion, no multiple coin types). Users: regular users, merchants, data analysts. Data source: *Cryptocurrency Transaction Insights*, DatabaseSample, 2026 (synthetic, for learning), accessed 15 October 2026. Add the dataset page URL you used.
+Akira is a fintech cryptocurrency platform where users hold wallets, send crypto to other users, and pay businesses that accept it. One currency unit is used throughout (no conversion, no multiple coin types). Users: regular users, merchants, data analysts. Data source: *Cryptocurrency Transaction Insights*, Database Sample, 2026 (synthetic, for learning), accessed 15 October 2026: <https://databasesample.com/datasets/cryptocurrency-transaction-insights>.
 
 ## 2. Original schema and its limitations
 Original tables: users, wallets, devices, addresses, transactions (4 foreign keys). Limits for Akira:
@@ -74,6 +72,9 @@ See sql/01 to 03. Every change maps to a rule above; nothing was added that the 
 - Single currency only; no external blockchain; not a production financial system.
 - ALTER TABLE statements commit automatically in MySQL, so the scripts are meant to run once, after a backup.
 - Your database was loaded from the file named v3 (the tab name); email is already UNIQUE there. State in the README which dataset version you used.
+
+## 10. Evidence to capture yourself
+Screenshots of 00_pre_checks output, 04_validation V1 to V6, and the four failing statements in V7 (the error messages are the evidence).
 
 ## 10. Evidence to capture yourself
 Screenshots of 00_pre_checks output, 04_validation V1 to V6, and the four failing statements in V7 (the error messages are the evidence).
