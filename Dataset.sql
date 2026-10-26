@@ -2,6 +2,8 @@
 -- Synthetic sample data, CC0-1.0. Deterministic: the same spec and seed produce this byte for byte.
 -- seed: cryptocurrency-transaction-insights:1
 -- Tables in dependency order; foreign keys are added after the data.
+CREATE DATABASE crypto_fintech;
+USE crypto_fintech;
 
 START TRANSACTION;
 
