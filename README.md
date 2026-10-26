@@ -7,7 +7,7 @@
 
 ### Files in this repository
 
--  `Dataset.sql` (repository root): the original *Cryptocurrency Transaction Insights* script. It loads the source data into the `crypto_fintech` database. It has not been edited.
+- `Dataset.sql` (repository root): the original *Cryptocurrency Transaction Insights* script. It creates the `crypto_fintech` database and loads the source data. It has not been edited.
 -  `crypto_fintech` database and loads the source data. I haven't edited it. All my changes to the schema are in separate scripts in the portfolio folders.
 - `README.md` (repository root): this file.
 - `portfolio-1-database-design/SQL/`: the numbered migration, backup and validation scripts.
